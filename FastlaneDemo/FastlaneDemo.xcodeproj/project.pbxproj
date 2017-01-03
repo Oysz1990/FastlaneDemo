@@ -354,7 +354,7 @@
 				DEVELOPMENT_TEAM = QAFYQ7L93S;
 				INFOPLIST_FILE = FastlaneDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.niiwoo.special.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niiwoo.finance.house;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -366,7 +366,7 @@
 				DEVELOPMENT_TEAM = QAFYQ7L93S;
 				INFOPLIST_FILE = FastlaneDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.niiwoo.special.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niiwoo.finance.house;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -416,6 +416,7 @@
 				4D3C7E621E1B3BE100367BFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D3C7E631E1B3BE100367BFC /* Build configuration list for PBXNativeTarget "FastlaneDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				4D3C7E651E1B3BE100367BFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
