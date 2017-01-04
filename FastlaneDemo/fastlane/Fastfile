@@ -20,7 +20,7 @@ platform :ios do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
     match(
       app_identifier: "com.niiwoo.finance.house",
-      type: "enterprise"
+      type: "adhoc"
     )
   end
 
