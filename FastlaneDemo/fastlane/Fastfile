@@ -29,6 +29,7 @@ platform :ios do
     gym(
       scheme: "FastlaneDemo",
       configuration: "Release",
+      export_method: "enterprise",
       clean: true,
       output_directory: ipa_path,
       output_name: ipa_name
