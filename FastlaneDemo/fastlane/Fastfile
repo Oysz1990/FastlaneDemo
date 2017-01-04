@@ -28,13 +28,13 @@ platform :ios do
     ipa_name = "FastlaneDemo-alpha.ipa"
     gym(
       scheme: "FastlaneDemo",
-      configuration: "Debug",
+      configuration: "Release",
       clean: true,
       output_directory: ipa_path,
       output_name: ipa_name
     )
     # snapshot
-
+    sh "ipa distribute:pgyer -f " + ipa_path + "/" + ipa_name +" -a 0e8952c4f7e6c5630c0299a5249d728f -u c95b59a6e3044f5f3ba093e3b9272521"
   end
 
   # desc "Runs all the tests"

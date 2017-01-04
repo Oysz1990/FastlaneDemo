@@ -1,5 +1,7 @@
-app_identifier "com.niiwoo.finance.house" # The bundle identifier of your app
-apple_id "cuishichuan@tuandai.com" # Your Apple email address
+for_lane :inhouse do
+  app_identifier "com.niiwoo.finance.house"
+  apple_id "cuishichuan@tuandai.com"
+end
 
 team_id "QAFYQ7L93S"  # Developer Portal Team ID
 
