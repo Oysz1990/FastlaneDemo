@@ -25,6 +25,7 @@ platform :ios do
     ensure_git_status_clean
     ipa_path = "/Users/ouyangshanzi/Desktop/" + Time.now.strftime("%Y-%m-%d-%H-%M-%S")
     ipa_name = "FastlaneDemo-enterprise.ipa"
+    ipa_destination = ipa_path + "/" + ipa_name
     gym(
       scheme: "FastlaneDemo",
       configuration: "Release",
@@ -34,7 +35,7 @@ platform :ios do
       output_name: ipa_name
     )
     # snapshot
-    sh "ipa distribute:pgyer -f "+ ipa_path + "/" + ipa_name +"  -u c95b59a6e3044f5f3ba093e3b9272521 -a 0e8952c4f7e6c5630c0299a5249d728f"
+    sh "ipa distribute:pgyer -f "ipa_destination"  -u "c95b59a6e3044f5f3ba093e3b9272521" -a "0e8952c4f7e6c5630c0299a5249d728f""
     # sh "ipa distribute:pgyer -u c95b59a6e3044f5f3ba093e3b9272521 -a 0e8952c4f7e6c5630c0299a5249d728f"
     # sh curl -F "file=@{$ipa_path/$ipa_name}" -F "uKey=c95b59a6e3044f5f3ba093e3b9272521" -F "_api_key=0e8952c4f7e6c5630c0299a5249d728f" http://www.pgyer.com/apiv1/app/upload
   end
