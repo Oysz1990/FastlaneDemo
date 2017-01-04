@@ -23,8 +23,10 @@ platform :ios do
   desc "Submit a new InHouse Build to pgyer"
   lane :InHouse do
     ensure_git_status_clean   #确保git状态为clean
-    ipa_path = "/Users/ouyangshanzi/Desktop/" + Time.now.strftime("%Y-%m-%d-%H-%M-%S")  #存放ipa、dsym文件的文件夹
-    ipa_name = "FastlaneDemo-enterprise.ipa"  #ipa文件名
+    # git_pull  #拉取git
+    increment_build_number
+    ipa_path = "/Users/ouyangshanzi/Desktop/FastlaneDemo-" + ENV["app_versionCode"]  #存放ipa、dsym文件的文件夹
+    ipa_name = "FastlaneDemo-enterprise-" + ENV["app_versionCode"] + ".ipa"  #ipa文件名
     ipa_destination = ipa_path + "/" + ipa_name #ipa文件路径
     gym(
       scheme: "FastlaneDemo", #
