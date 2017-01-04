@@ -18,34 +18,49 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    
-    
+
   end
 
-  desc "Runs all the tests"
-  lane :test do
-    scan
-  end
-
-  desc "Submit a new Beta Build to Apple TestFlight"
-  desc "This will also make sure the profile is up to date"
-  lane :beta do
-    # match(type: "appstore") # more information: https://codesigning.guide
-    gym(scheme: "FastlaneDemo") # Build your app - more options available
-    pilot
-
-    # sh "your_script.sh"
-    # You can also use other beta testing services here (run `fastlane actions`)
-  end
-
-  desc "Deploy a new version to the App Store"
-  lane :release do
-    # match(type: "appstore")
+  desc "Submit a new InHouse Build to pgyer"
+  lane :InHouse do
+    ensure_git_status_clean
+    ipa_path = "/Users/ouyangshanzi/Desktop/" + Time.now.strftime("%Y-%m-%d")
+    ipa_name = "FastlaneDemo-alpha.ipa"
+    gym(
+      scheme: "FastlaneDemo",
+      configuration: "Debug",
+      clean: true,
+      output_directory: ipa_path,
+      output_name: ipa_name
+    )
     # snapshot
-    gym(scheme: "FastlaneDemo") # Build your app - more options available
-    deliver(force: true)
-    # frameit
+
   end
+
+  # desc "Runs all the tests"
+  # lane :test do
+  #   scan
+  # end
+
+  # desc "Submit a new Beta Build to Apple TestFlight"
+  # desc "This will also make sure the profile is up to date"
+  # lane :beta do
+  #   # match(type: "appstore") # more information: https://codesigning.guide
+  #   gym(scheme: "FastlaneDemo") # Build your app - more options available
+  #   pilot
+  #
+  #   # sh "your_script.sh"
+  #   # You can also use other beta testing services here (run `fastlane actions`)
+  # end
+
+  # desc "Deploy a new version to the App Store"
+  # lane :release do
+  #   # match(type: "appstore")
+  #   # snapshot
+  #   gym(scheme: "FastlaneDemo") # Build your app - more options available
+  #   deliver(force: true)
+  #   # frameit
+  # end
 
   # You can define as many lanes as you want
 
