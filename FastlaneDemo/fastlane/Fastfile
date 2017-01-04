@@ -24,8 +24,8 @@ platform :ios do
   desc "Submit a new InHouse Build to pgyer"
   lane :InHouse do
     ensure_git_status_clean
-    ipa_path = "/Users/ouyangshanzi/Desktop/" + Time.now.strftime("%Y-%m-%d")
-    ipa_name = "FastlaneDemo-alpha.ipa"
+    ipa_path = "/Users/ouyangshanzi/Desktop/" + Time.now.strftime("%Y-%m-%d-%HH-%MM-%SS")
+    ipa_name = "FastlaneDemo-enterprise.ipa"
     gym(
       scheme: "FastlaneDemo",
       configuration: "Release",
