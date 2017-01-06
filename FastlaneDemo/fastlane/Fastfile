@@ -28,21 +28,21 @@ platform :ios do
     ipa_path = "/Users/ouyangshanzi/Desktop/FastlaneDemo-" + Time.now.strftime("%Y-%m-%d-%H-%M-%S") #存放ipa、dsym文件的文件夹
     ipa_name = "FastlaneDemo-enterprise.ipa"  #ipa文件名
     ipa_destination = ipa_path + "/" + ipa_name #ipa文件路径
-    # gym(
-    #   scheme: "FastlaneDemo", #
-    #   configuration: "Release", #打包方式 Release、Debug
-    #   export_method: "enterprise",  #adhoc、debug、enterprise、appstore
-    #   clean: true,  #打包前先clean，减小包大小和一些库的编译
-    #   output_directory: ipa_path, #ipa导出文件夹
-    #   output_name: ipa_name #ipa导出的文件名
-    # )
     gym(
       scheme: "FastlaneDemo", #
       configuration: "Release", #打包方式 Release、Debug
+      export_method: "enterprise",  #adhoc、debug、enterprise、appstore
       clean: true,  #打包前先clean，减小包大小和一些库的编译
-      destination: ipa_path, #ipa导出文件夹
-      ipa: ipa_name #ipa导出的文件名
+      output_directory: ipa_path, #ipa导出文件夹
+      output_name: ipa_name #ipa导出的文件名
     )
+    # ipa(
+    #   scheme: "FastlaneDemo", #
+    #   configuration: "Release", #打包方式 Release、Debug
+    #   clean: true,  #打包前先clean，减小包大小和一些库的编译
+    #   destination: ipa_path, #ipa导出文件夹
+    #   ipa: ipa_name #ipa导出的文件名
+    # )
     # snapshot
     sh "ipa distribute:pgyer -f "+ ipa_destination +" -u c95b59a6e3044f5f3ba093e3b9272521 -a 0e8952c4f7e6c5630c0299a5249d728f"
   end
