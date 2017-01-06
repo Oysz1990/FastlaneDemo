@@ -36,7 +36,7 @@ platform :ios do
     #   output_directory: ipa_path, #ipa导出文件夹
     #   output_name: ipa_name #ipa导出的文件名
     # )
-    ipa(
+    gym(
       scheme: "FastlaneDemo", #
       configuration: "Release", #打包方式 Release、Debug
       clean: true,  #打包前先clean，减小包大小和一些库的编译
