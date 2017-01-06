@@ -39,7 +39,7 @@ platform :ios do
     ipa(
       scheme: "FastlaneDemo", #
       configuration: "Release", #打包方式 Release、Debug
-      export_method: "enterprise",  #adhoc、debug、enterprise、appstore
+      #export_method: "enterprise",  #adhoc、debug、enterprise、appstore
       clean: true,  #打包前先clean，减小包大小和一些库的编译
       destination: ipa_path, #ipa导出文件夹
       ipa: ipa_name #ipa导出的文件名
