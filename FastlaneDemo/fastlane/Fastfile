@@ -46,7 +46,8 @@ platform :ios do
     # )
     # snapshot
     sh "ipa distribute:pgyer -f "+ ipa_destination +" -u c95b59a6e3044f5f3ba093e3b9272521 -a 0e8952c4f7e6c5630c0299a5249d728f"
-    sh "ipa distribute:fir -f "+ ipa_destination +" -u e8dadc58747884132f02e861bac04462 -a 56d6b3f6e75e2d04e1000010"
+    # sh "ipa distribute:fir -f "+ ipa_destination +" -u e8dadc58747884132f02e861bac04462 -a 56d6b3f6e75e2d04e1000010"
+    sh "ipa distribute:ftp -f "+ ipa_destination +" --host 192.168.10.80 -u dell -p 123456 /测试共享文件夹/iOS版本/4.0.8/ "
   end
 
   # desc "Runs all the tests"
