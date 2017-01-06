@@ -5,32 +5,32 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.000392">
+      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.00039">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.000186">
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.000161">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: ensure_git_status_clean" time="0.05851">
+      <testcase classname="fastlane.lanes" name="2: ensure_git_status_clean" time="0.046728">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: gym" time="40.49245">
+      <testcase classname="fastlane.lanes" name="3: gym" time="16.665448">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: ipa distribute:pgyer -f /Users/ouyangshanzi/Desktop/FastlaneDemo-2017-01-06-11-40-39/FastlaneDemo-enterprise.ipa -u c95b59a6e3044f5f3ba093e3b9272521 -a 0e8952c4f7e6c5630c0299a5249d728f" time="5.988532">
+      <testcase classname="fastlane.lanes" name="4: ipa distribute:pgyer -f /Users/ouyangshanzi/Desktop/FastlaneDemo-2017-01-06-11-43-06/FastlaneDemo-enterprise.ipa -u c95b59a6e3044f5f3ba093e3b9272521 -a 0e8952c4f7e6c5630c0299a5249d728f" time="3.426053">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: ipa distribute:ftp -f /Users/ouyangshanzi/Desktop/FastlaneDemo-2017-01-06-11-40-39/FastlaneDemo-enterprise.ipa --host 192.168.10.80 -u dell -p 123456 /测试共享文件夹/iOS版本/4.0.8/ " time="2.491025">
+      <testcase classname="fastlane.lanes" name="5: ipa distribute:sftp -f /Users/ouyangshanzi/Desktop/FastlaneDemo-2017-01-06-11-43-06/FastlaneDemo-enterprise.ipa --host 192.168.10.80 -u dell -p 123456 /测试共享文件夹/iOS版本/4.0.8/ " time="0.527117">
         
       </testcase>
     
