@@ -34,10 +34,10 @@ module Fastlane
 
       def self.available_options
         [
-          FastlaneCore::ConfigItem.new(key: project,
+          FastlaneCore::ConfigItem.new(key: :project,
                                       description: "project name",
                                       is_string: true),
-          FastlaneCore::ConfigItem.new(key: scheme,
+          FastlaneCore::ConfigItem.new(key: :scheme,
                                       description: "scheme name",
                                       is_string: true)
         ]
