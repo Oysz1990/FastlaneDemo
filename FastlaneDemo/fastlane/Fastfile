@@ -65,7 +65,7 @@ platform :ios do
     app_path = get_debug_app_path(scheme: scheme, project: project)
     (1..times.to_i).each do |i|
       # 使用ios-sim命令安装app到模拟器，如果是真机的话，则使用ios-deploy
-      install_app_on_simulator(divice_type: device_type, app_path: app_path)
+      install_app_on_simulator(device_type: device_type, app_path: app_path)
       sleep(30)
       instruments_ui_automation(device: device_udid, app_path: app_path, report_output_path: report_output_path, script: script)
     end
