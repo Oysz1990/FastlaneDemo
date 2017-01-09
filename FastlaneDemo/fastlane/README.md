@@ -11,6 +11,11 @@ sudo gem install fastlane
 fastlane ios InHouse
 ```
 Submit a new InHouse Build to pgyer
+### ios do_monkey_test
+```
+fastlane ios do_monkey_test
+```
+UI automation test
 
 ----
 
