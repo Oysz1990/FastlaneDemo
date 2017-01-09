@@ -9,7 +9,7 @@ module Fastlane
         command << "--devicetypeid #{device_type}"
         command << "--exit"
 
-        Action.sh command.join(' ')
+        Actions.sh command.join(' ')
       end
 
       def self.description

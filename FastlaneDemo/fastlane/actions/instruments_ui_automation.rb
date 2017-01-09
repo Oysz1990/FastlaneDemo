@@ -32,15 +32,15 @@ module Fastlane
 
               UI.important("First attempt failed with iPhone Simulator error: #{iphone_simulator_time_out_error.source}")
               UI.important("Retrying once more...")
-              Action.sh command.join(' ')
+              Actions.sh command.join(' ')
             end
           end
           raise ex if raise_error
         end
 
-        Action.sh 'rm -rf instruments*.trace'
+        Actions.sh 'rm -rf instruments*.trace'
 
-        Action.sh 'killall "Simulator"'
+        Actions.sh 'killall "Simulator"'
       end
 
       def self.description
