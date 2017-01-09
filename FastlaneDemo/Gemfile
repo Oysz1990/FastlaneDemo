@@ -2,3 +2,4 @@ source "https://gems.ruby-china.org"
 
 gem "fastlane"
 gem "krausefx-shenzhen"
+gem "cocoapods"

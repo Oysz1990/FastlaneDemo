@@ -54,6 +54,7 @@ platform :ios do
     report_output_path  = options[:report_output_path]
 
     git_pull
+    cocoapods
     xcodebuild(
       scheme: scheme,
       arch: 'x86_64',
