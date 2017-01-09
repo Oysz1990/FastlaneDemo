@@ -59,6 +59,7 @@ platform :ios do
       scheme: scheme,
       arch: 'x86_64',
       sdk: 'iphonesimulator10.2',
+      workspace: "#{project}.xcworkspace",
       configuration: 'Debug'
     )
     app_path = get_debug_app_path(
